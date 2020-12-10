@@ -1,0 +1,17 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+  <div class="container">
+    <div class="logo" style="cursor: pointer;" [routerLink]="['/home']"></div>
+    <div>
+      <div class="add-post" data-toggle="modal" data-target="#postModal" style="cursor: pointer;"></div>
+      <a href="#" (click)="sair()" style="margin-left: 25px;"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Sair</a>
+      
+    </div>
+    
+  </div>  
+</nav>
+
+<br /><br /><br />
+<div class="container">
+  <app-publicacoes #publicacoes></app-publicacoes>
+  <app-incluir-publicacao (atualizarTimeline)="atualizarTimeLine()" ></app-incluir-publicacao>   
+</div>
